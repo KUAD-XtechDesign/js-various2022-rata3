@@ -12,6 +12,7 @@ header{
   position: fixed;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.9);
+  color: rgb(198, 89, 89);
   padding: 20px;
   display: flex;
   align-items: center;
@@ -88,7 +89,7 @@ img{
   left: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(to right, blue,red);
+  background: linear-gradient(to right, rgb(32, 140, 173),rgb(203, 187, 67));
 }
 
 #intro{
