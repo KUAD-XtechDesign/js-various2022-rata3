@@ -5,7 +5,7 @@ $(function(){
   $("#intro").on("click",introAnime).on("click",introAnime2)//クリックしたらintroAnimeを実行
 
   function introAnime(){//jqueryでフェードアウト、終わったらcontentAnime実行
-    $("#intro").fadeOut(2000,contentAnime);
+    $("#intro").fadeOut(2500,contentAnime);
   }
   function contentAnime(){
     setTimeout(backAnime,300);//0.3秒後backAnime実行
@@ -50,7 +50,7 @@ $(function(){
 
     console.log(windowH,documentH,scrollTop)
 
-    $("#wave").css("transform",'rotate('+scrollTop+'deg)')//右上の背景画像の位置変更(CSS)
+    $("#wave").css("transform",'rotate('+scrollTop/10+'deg)')//右上の背景画像の位置変更(CSS)
     $("#line").css("width",scrollRatio * documentW)//グラデーションラインの幅変更(CSS)
 
   })
