@@ -50,7 +50,7 @@ $(function(){
 
     console.log(windowH,documentH,scrollTop)
 
-    $("#wave").css("background-position-x",scrollTop/10)//右上の背景画像の位置変更(CSS)
+    $("#wave").css("transform",'rotate('+scrollTop+'deg)')//右上の背景画像の位置変更(CSS)
     $("#line").css("width",scrollRatio * documentW)//グラデーションラインの幅変更(CSS)
 
   })
@@ -69,6 +69,19 @@ $(function(){
     $("html, body").animate({scrollTop:separate*2}, 1000, "swing");
   })
 
-
+  //スライド追加
+  $("#slide").slick(
+    {
+      dots:true,
+      arrows: false,
+      slidesToShow: 1,
+      infinite: true,
+      autoplay: true,
+      fade:true,
+      pauseOnHover: false,
+      autoplaySpeed: 3000,
+      speed: 500
+    }
+  )
 
 })

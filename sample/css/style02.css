@@ -122,3 +122,25 @@ img{
   top: 25%;
 }
 
+#top_content{
+  position: relative;
+  height: 100vh;
+  background-color: #fff;
+}
+
+#top_content .each_slide{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#top_content .each_slide img{
+  object-fit: cover;
+}
+
+.slick-dots{
+  width: auto;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
