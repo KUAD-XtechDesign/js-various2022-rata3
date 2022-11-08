@@ -50,7 +50,7 @@ $(function(){
 
     console.log(windowH,documentH,scrollTop)
 
-    $("#wave").css("background-position-x",scrollTop/10)//右上の背景画像の位置変更(CSS)
+    $("#wave").css("transform",'rotate('+scrollTop/10+'deg)')//右上の背景画像の位置変更(CSS)
     $("#line").css("width",scrollRatio * documentW)//グラデーションラインの幅変更(CSS)
 
   })
