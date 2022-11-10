@@ -61,6 +61,11 @@ header{
   margin-bottom: 40px;
   color: #fff;
   image-rendering: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .font_test {
 font-family: Georgia, 'Times New Roman', Times, serif; /* フォントの種類指定 */
@@ -71,12 +76,8 @@ font-family: Georgia, 'Times New Roman', Times, serif; /* フォントの種類�
   
 .anim-box {
   position: absolute;
-  max-width: 100%; 
-  left: 700px;
-  right: 20px;;
-  width: 100%;
-  height: 100%;
-  background-image: url(../images/hane.png);
+  right: -20px;
+  bottom: -55px;
 }
 
 
@@ -148,7 +149,7 @@ img{
   align-items: center;
   justify-content: center;
   top: 0;
-
+  left: 0;
 }
 
 #intro2{
