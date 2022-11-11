@@ -1,5 +1,27 @@
 $(function(){
+  
+  $("#intro p").hide().fadeIn(1000)
+  //setTimeout(introAnime,2000);//2秒経った時にintroAnimeを実行
+  $("#intro").on("click",introAnime).on("click",introAnime2)//クリックしたらintroAnimeを実行
 
+  function introAnime(){//jqueryでフェードアウト、終わったらcontentAnime実行
+    $("#intro").fadeOut(2500,contentAnime);
+  }
+  function contentAnime(){
+    setTimeout(backAnime,300);//0.3秒後backAnime実行
+  }
+
+  $("#intro2 p").hide().fadeIn(1000)
+  //setTimeout(introAnime,2000);//2秒経った時にintroAnimeを実行
+  $("#intro2").on("click",introAnime2).on("click",introAnime)//クリックしたらintroAnimeを実行
+
+  function introAnime2(){//jqueryでフェードアウト、終わったらcontentAnime実行
+    $("#intro2").fadeOut(1000,contentAnime2);
+  }
+  function contentAnime2(){
+    setTimeout(backAnime,300);//0.3秒後backAnime実行
+  }
+  
   let windowH
   let documentH 
   let documentW 
@@ -28,7 +50,7 @@ $(function(){
 
     console.log(windowH,documentH,scrollTop)
 
-    $("#wave").css("background-position-x",scrollTop/10)//右上の背景画像の位置変更(CSS)
+    $("#wave").css("transform",'rotate('+scrollTop/10+'deg)')//右上の背景画像の位置変更(CSS)
     $("#line").css("width",scrollRatio * documentW)//グラデーションラインの幅変更(CSS)
 
   })
@@ -47,6 +69,19 @@ $(function(){
     $("html, body").animate({scrollTop:separate*2}, 1000, "swing");
   })
 
-
+  //スライド追加
+  $("#slide").slick(
+    {
+      dots:true,
+      arrows: false,
+      slidesToShow: 1,
+      infinite: true,
+      autoplay: true,
+      fade:true,
+      pauseOnHover: false,
+      autoplaySpeed: 3000,
+      speed: 500
+    }
+  )
 
 })

@@ -9,9 +9,11 @@ img{
 }
 
 header{
+ font-family: 'Courier New', Courier, monospace;
   position: fixed;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0);
+  color: rgb(216, 145, 78);
   padding: 20px;
   display: flex;
   align-items: center;
@@ -20,10 +22,13 @@ header{
 }
 
 #wave{
-  width:60px;
-  height: 60px;
-  background-image: url(../images/wave.png);
-  background-size: 60px auto;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width:100px;
+  height: 100px;
+  background-image: url(../images/inkorogo_siro.png);
+  background-size: 100px auto;
   background-position: center center;
   background-repeat: repeat-x;
   margin-left: auto;
@@ -31,10 +36,12 @@ header{
 
 #menu{
   position: fixed;
-  top: 100px;
-  font-size: 100px;
-  font-family: 'Roboto', sans-serif;
+  top: 10px;
+  font-size: 40px;
+  max-width: 80%;
+  font-family: 'Courier New', Courier, monospace;
   line-height: 1;
+  color: rgb(225, 226, 145);
   left: 20px;
   z-index: 100;
   cursor: pointer;
@@ -47,10 +54,50 @@ header{
   max-width: 1000px;
 }
 
-.set{
-  background-color: #ccc;
+.set1{
+  background-color: rgba(181, 163, 61, 0.767);
+  font-size: large;
   min-height: 400px;
   margin-bottom: 40px;
+  color: #fff;
+  image-rendering: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.font_test {
+font-family: Georgia, 'Times New Roman', Times, serif; /* フォントの種類指定 */
+}
+.font_test2{
+  font-family: Georgia, 'Times New Roman', Times, serif; /* フォントの種類指定 */
+  font-size: 40px}
+  
+.anim-box {
+  position: absolute;
+  right: -20px;
+  bottom: -55px;
+}
+
+
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+.flex>p{
+    width: 49%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.set{
+  background-color: rgba(181, 163, 61, 0.767);
+  min-height: 400px;
+  margin-bottom: 40px;
+  color: #fff;
+  font-style: italic;
+  image-rendering: auto;
 }
 
 body.one #backimg01,
@@ -88,5 +135,60 @@ img{
   left: 0;
   width: 0;
   height: 3px;
-  background: linear-gradient(to right, blue,red);
+  background: linear-gradient(to right, rgb(118, 62, 62),rgb(246, 255, 177));
 }
+
+#intro{
+  position: fixed;
+  display: flex;
+  z-index: 101;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+}
+
+#intro2{
+  position: fixed;
+  display: flex;
+  z-index: 101;
+  width: 50%;
+  height: 50%;
+  left: 25%;
+  font-family: serif;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  top: 25%;
+}
+
+
+#top_content{
+  position: relative;
+  height: 100vh;
+  background-color: #fff;
+}
+
+#top_content .each_slide{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#top_content .each_slide img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slick-dots{
+  width: auto;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
